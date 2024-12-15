@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Repositories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .autocomplete {
+            position: relative;
+            width: 300px;
+        }
+        .autocomplete-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            background: #fff;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+        .autocomplete-list li {
+            padding: 8px;
+            cursor: pointer;
+        }
+        .autocomplete-list li:hover {
+            background: #f0f0f0;
+        }
+        .repo-list {
+            margin-top: 20px;
+        }
+        .repo-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        .repo-item button {
+            background: red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>GitHub Repositories</h1>
+<div class="autocomplete">
+    <input type="text" id="search" placeholder="Search repositories..." />
+    <ul class="autocomplete-list" id="autocomplete-list"></ul>
+</div>
+<div class="repo-list" id="repo-list"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
